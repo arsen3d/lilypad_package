@@ -1,0 +1,8 @@
+Package: lilypad
+Version: 1.0
+Section: base
+Priority: optional
+Architecture: all
+Depends: bash
+Maintainer: Lilypad <info@lilypad.tech>
+Description: Installer for lilypad cli.
