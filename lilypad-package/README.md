@@ -9,6 +9,12 @@ To add the repository and install the package, run the following commands:
 ```
 echo "deb [trusted=yes] https://your.github.io/repo/ focal main" | sudo tee /etc/apt/sources.list.d/lilypad.list
 echo "deb [trusted=yes] https://github.com/arsen3d/lilypad_package/ focal main" | sudo tee /etc/apt/sources.list.d/lilypad.list
+
+echo "deb [trusted=yes] https://arsen3d.github.io/lilypad_package/ focal main" | sudo tee /etc/apt/sources.list.d/lilypad.list
+
+echo "deb [trusted=yes] https://raw.githubusercontent.com/arsen3d/lilypad_package/refs/heads/main/" | sudo tee /etc/apt/sources.list.d/lilypad.list
+
+https://raw.githubusercontent.com/arsen3d/lilypad_package/refs/heads/main/
 https://github.com/arsen3d/lilypad_package
 sudo apt-get update
 sudo apt-get install lilypad-package
