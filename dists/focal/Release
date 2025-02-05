@@ -6,10 +6,4 @@ Codename: focal
 Architectures: amd64
 Components: main
 Description: Lilypad CLI
-Date: $(date -R)
-MD5Sum:
- $(md5sum Packages | cut -d' ' -f1) $(wc -c < Packages) Packages
- $(md5sum Packages.gz | cut -d' ' -f1) $(wc -c < Packages.gz) Packages.gz
-SHA256:
- $(sha256sum Packages | cut -d' ' -f1) $(wc -c < Packages) Packages
- $(sha256sum Packages.gz | cut -d' ' -f1) $(wc -c < Packages.gz) Packages.gz
+Date: Thu, 01 Jan 1970 00:00:00 +0000
