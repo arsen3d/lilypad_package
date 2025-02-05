@@ -1,13 +1,13 @@
 Package: lilypad
-Version: 1.2
+Version: 2.11.0
 Architecture: all
 Maintainer: Lilypad <info@lilypad.tech>
 Depends: bash
 Filename: ./lilypad-package.deb
-Size: 31481312
-MD5sum: e380776a178ecd29cc2421111bd7fa42
-SHA1: f9e28da7660d091f54b8b5bef013d06c36834773
-SHA256: 7845d5c13bfe17b24a65b9d3239c6261f2011952b680f36268f11b604784d1e3
+Size: 31481470
+MD5sum: bddca8d4b2a906b39a532421fb245048
+SHA1: 55b93e1dd433770e6af82cedc39ac5af498cddfe
+SHA256: 5635aca80a6e4cc11c1963b72f7ce749ca6b60aaeb6735eec3d3fcf878493287
 Section: base
 Priority: optional
 Description: Installer for lilypad cli.
