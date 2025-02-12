@@ -7,3 +7,12 @@ Architectures: amd64
 Components: main
 Description: Lilypad CLI
 Date: Thu, 01 Jan 1970 00:00:00 +0000
+MD5Sum:
+SHA1:
+ a3b08bfe31caf5fb5eaf0838c5736e9dd7d14bc7 395 main/binary-amd64/Packages
+ b715a169d711017f709a69c0d507f6904389024b 314 main/binary-amd64/Packages.gz
+SHA256:
+ 909f52530049a5bfae02dff48ed025789534fd64157a39a4e7b983205210bce3 395 main/binary-amd64/Packages
+ 580f25e1c635e552c55999ffde171fe83d42c9e827528037caa8f68c6bef4785 314 main/binary-amd64/Packages.gz
+ d849d5bbc88f71b288f58d45d6a9388c 395 main/binary-amd64/Packages
+ 13cad036fb22262e8385cf4d772fda63 314 main/binary-amd64/Packages.gz
