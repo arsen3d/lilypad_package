@@ -3,6 +3,6 @@ Version: 2.11.0
 Section: base
 Priority: optional
 Architecture: all
-Depends: bash
+Depends: bash, dialog
 Maintainer: Lilypad <info@lilypad.tech>
 Description: Installer for lilypad cli.

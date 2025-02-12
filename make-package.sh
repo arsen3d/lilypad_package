@@ -6,7 +6,7 @@ sed -i "s/^Version: .*/Version: $LATEST_VERSION/" lilypad-package/DEBIAN/control
 sed -i "s/^Version: .*/Version: $LATEST_VERSION/" dists/focal/Release
 
 chmod +x lilypad-package/usr/local/bin/lilypad
-dpkg-deb --build  --compression=gzip lilypad-package
+dpkg-deb --build --root-owner-group -Zxz lilypad-package
 rm dists/focal/main/binary-amd64/Packages
 rm dists/focal/main/binary-amd64/Packages.gz
 dpkg-scanpackages . /dev/null > dists/focal/main/binary-amd64/Packages
