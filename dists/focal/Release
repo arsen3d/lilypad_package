@@ -6,22 +6,13 @@ Codename: focal
 Architectures: amd64
 Components: main
 Description: Lilypad CLI
+Date: Tue, 11 Feb 2025 16:59:52 -0800
 MD5Sum:
- 0f311f37b98e4642f39b598683192b5c 395 main/binary-amd64/Packages
- f46cfbe3a441892ec4ab7d4ec57a9186 316 main/binary-amd64/Packages.gz
+ adef261702f3a7660ab4e2f615bf9876 395 main/binary-amd64/Packages
+ 8afcfe88cea9c99f0d3e43b1e5830028 314 main/binary-amd64/Packages.gz
 SHA1:
- 8afab7dcc8e13388507bda1bd09d973c1ce4bfcb 395 main/binary-amd64/Packages
- f161e454612e81c3de54aec2f1bb1a5a7c3af897 316 main/binary-amd64/Packages.gz
+ af353eb9e7c27fa80fe7f3ec1569a6c48377ed09 395 main/binary-amd64/Packages
+ e498e2a2440a9f20be25ce6ad7dfb06dc0d397b3 314 main/binary-amd64/Packages.gz
 SHA256:
- 7bf0626a5fb58b0b27629da69e6ece217f4285f50e1f2126fd58cb4b28061f27 395 main/binary-amd64/Packages
- b854122cb10333400473698af739a3c6cffcac4d1f9008b22a687f80c7cf11e1 316 main/binary-amd64/Packages.gz
-Date: Tue, 11 Feb 2025 16:56:58 -0800
-MD5Sum:
-SHA1:
- 246f6d0c128c6b1b549b0f0d0a50d456a1a9d327 395 main/binary-amd64/Packages
- 949009b388d72b3a028f8741480dc559fde719c3 315 main/binary-amd64/Packages.gz
-SHA256:
- 8b6a8a615e0caa35a4b788ca48676fa4efc71ef88a006d29c15cd155027beb05 395 main/binary-amd64/Packages
- 66b74e05975dc06a9d7f776c91f3cdfc0a6e3c3f8602d924d2efcb342e9ded10 315 main/binary-amd64/Packages.gz
- 34a92aaa0ea489e4614cd164155a5223 395 main/binary-amd64/Packages
- d8259217ff3f62f53e81d7423fe47f4a 315 main/binary-amd64/Packages.gz
+ 59c72e7dbb5ca5942e292b6a6ecdc029d6cfe235a009b50c6973dde00a741c34 395 main/binary-amd64/Packages
+ b5bda1e26593c81efbbde44664e4c170457760210789b433dfc6521de967fd00 314 main/binary-amd64/Packages.gz

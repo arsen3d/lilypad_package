@@ -24,17 +24,30 @@ SHA1_PACKAGES_GZ=$(sha1sum dists/focal/main/binary-amd64/Packages.gz | cut -d' '
 SHA256_PACKAGES=$(sha256sum dists/focal/main/binary-amd64/Packages | cut -d' ' -f1)
 SHA256_PACKAGES_GZ=$(sha256sum dists/focal/main/binary-amd64/Packages.gz | cut -d' ' -f1)
 
-# Update Release file with all hashes
-sed -i "/^Description/a\\
-MD5Sum:\\
- $PACKAGES_MD5 $PACKAGES_SIZE main/binary-amd64/Packages\\
- $PACKAGES_GZ_MD5 $PACKAGES_GZ_SIZE main/binary-amd64/Packages.gz\\
-SHA1:\\
- $SHA1_PACKAGES $PACKAGES_SIZE main/binary-amd64/Packages\\
- $SHA1_PACKAGES_GZ $PACKAGES_GZ_SIZE main/binary-amd64/Packages.gz\\
-SHA256:\\
- $SHA256_PACKAGES $PACKAGES_SIZE main/binary-amd64/Packages\\
- $SHA256_PACKAGES_GZ $PACKAGES_GZ_SIZE main/binary-amd64/Packages.gz" dists/focal/Release
+# Create temporary file with new content
+cat > dists/focal/Release.tmp << EOF
+Origin: Lilypad
+Label: Lilypad
+Suite: stable
+Version: $LATEST_VERSION
+Codename: focal
+Architectures: amd64
+Components: main
+Description: Lilypad CLI
+Date: $CURRENT_DATE
+MD5Sum:
+ $PACKAGES_MD5 $PACKAGES_SIZE main/binary-amd64/Packages
+ $PACKAGES_GZ_MD5 $PACKAGES_GZ_SIZE main/binary-amd64/Packages.gz
+SHA1:
+ $SHA1_PACKAGES $PACKAGES_SIZE main/binary-amd64/Packages
+ $SHA1_PACKAGES_GZ $PACKAGES_GZ_SIZE main/binary-amd64/Packages.gz
+SHA256:
+ $SHA256_PACKAGES $PACKAGES_SIZE main/binary-amd64/Packages
+ $SHA256_PACKAGES_GZ $PACKAGES_GZ_SIZE main/binary-amd64/Packages.gz
+EOF
+
+# Replace old Release file with new one
+mv dists/focal/Release.tmp dists/focal/Release
 
 # Commit and push changes
 git add .
