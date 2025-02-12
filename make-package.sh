@@ -9,23 +9,16 @@ rm -f dists/focal/main/binary-amd64/Packages*
 dpkg-scanpackages . /dev/null > dists/focal/main/binary-amd64/Packages
 gzip -k dists/focal/main/binary-amd64/Packages
 
-# Update Release file with current version and timestamp
-CURRENT_DATE=$(date -R)
-sed -i "s/^Version: .*/Version: $LATEST_VERSION/" dists/focal/Release
-sed -i "s/^Date: .*/Date: $CURRENT_DATE/" dists/focal/Release
-
-# Calculate hashes and sizes
+# Calculate hashes
 PACKAGES_MD5=$(md5sum dists/focal/main/binary-amd64/Packages | cut -d' ' -f1)
 PACKAGES_GZ_MD5=$(md5sum dists/focal/main/binary-amd64/Packages.gz | cut -d' ' -f1)
-PACKAGES_SIZE=$(wc -c < dists/focal/main/binary-amd64/Packages)
-PACKAGES_GZ_SIZE=$(wc -c < dists/focal/main/binary-amd64/Packages.gz)
 SHA1_PACKAGES=$(sha1sum dists/focal/main/binary-amd64/Packages | cut -d' ' -f1)
 SHA1_PACKAGES_GZ=$(sha1sum dists/focal/main/binary-amd64/Packages.gz | cut -d' ' -f1)
 SHA256_PACKAGES=$(sha256sum dists/focal/main/binary-amd64/Packages | cut -d' ' -f1)
 SHA256_PACKAGES_GZ=$(sha256sum dists/focal/main/binary-amd64/Packages.gz | cut -d' ' -f1)
 
-# Create temporary file with new content
-cat > dists/focal/Release.tmp << EOF
+# Create Release file
+cat > dists/focal/Release << EOF
 Origin: Lilypad
 Label: Lilypad
 Suite: stable
@@ -34,20 +27,17 @@ Codename: focal
 Architectures: amd64
 Components: main
 Description: Lilypad CLI
-Date: $CURRENT_DATE
+Date: $(date -R)
 MD5Sum:
- $PACKAGES_MD5 $PACKAGES_SIZE main/binary-amd64/Packages
- $PACKAGES_GZ_MD5 $PACKAGES_GZ_SIZE main/binary-amd64/Packages.gz
+ $PACKAGES_MD5 main/binary-amd64/Packages
+ $PACKAGES_GZ_MD5 main/binary-amd64/Packages.gz
 SHA1:
- $SHA1_PACKAGES $PACKAGES_SIZE main/binary-amd64/Packages
- $SHA1_PACKAGES_GZ $PACKAGES_GZ_SIZE main/binary-amd64/Packages.gz
+ $SHA1_PACKAGES main/binary-amd64/Packages
+ $SHA1_PACKAGES_GZ main/binary-amd64/Packages.gz
 SHA256:
- $SHA256_PACKAGES $PACKAGES_SIZE main/binary-amd64/Packages
- $SHA256_PACKAGES_GZ $PACKAGES_GZ_SIZE main/binary-amd64/Packages.gz
+ $SHA256_PACKAGES main/binary-amd64/Packages
+ $SHA256_PACKAGES_GZ main/binary-amd64/Packages.gz
 EOF
-
-# Replace old Release file with new one
-mv dists/focal/Release.tmp dists/focal/Release
 
 # Commit and push changes
 git add .
