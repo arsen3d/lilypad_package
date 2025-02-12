@@ -6,4 +6,13 @@ Codename: focal
 Architectures: amd64
 Components: main
 Description: Lilypad CLI
-
+Date: Thu, 01 Jan 1970 00:00:00 +0000
+MD5Sum:
+SHA1:
+ 246f6d0c128c6b1b549b0f0d0a50d456a1a9d327 395 main/binary-amd64/Packages
+ 949009b388d72b3a028f8741480dc559fde719c3 315 main/binary-amd64/Packages.gz
+SHA256:
+ 8b6a8a615e0caa35a4b788ca48676fa4efc71ef88a006d29c15cd155027beb05 395 main/binary-amd64/Packages
+ 66b74e05975dc06a9d7f776c91f3cdfc0a6e3c3f8602d924d2efcb342e9ded10 315 main/binary-amd64/Packages.gz
+ 34a92aaa0ea489e4614cd164155a5223 395 main/binary-amd64/Packages
+ d8259217ff3f62f53e81d7423fe47f4a 315 main/binary-amd64/Packages.gz
