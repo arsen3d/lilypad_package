@@ -1,5 +1,4 @@
 LATEST_VERSION=$(curl -s https://api.github.com/repos/Lilypad-Tech/lilypad/releases/latest | grep -Po '"tag_name": "v\K.*?(?=")')
-LATEST_VERSION=2.11.1
 curl -L "https://github.com/Lilypad-Tech/lilypad/releases/download/v$LATEST_VERSION/lilypad-linux-amd64-cpu" -o lilypad-package/usr/local/bin/lilypad
 sed -i "s/^Version: .*/Version: $LATEST_VERSION/" lilypad-package/DEBIAN/control
 
